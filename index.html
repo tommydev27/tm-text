@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tommy website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccdbd7;
+    color: black;
+    border: 1px solid #89a8c7;
+    border-radius: 5px;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 95%;
+    height: 97vh; 
+}
+
+.profile-name {
+    font-size: 12px;
+    font-weight: bold;
+    color: #2375c2;
+    margin-top: 8px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+        textarea {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        select, button {
+            padding: 3px;
+            width: 100%;
+            color: white;
+            background-color: #0f3263;
+            font-size: 16px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #2375c2;
+            color: white;
+        }
+        #normalText, #fancyText {
+            width: 95%;
+            margin-top: 4px;
+            height: 60px;
+            resize: vertical;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+
+        .button-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            overflow-y: auto; 
+            height: 260px; 
+            padding: 10px;
+            gap: 8px;
+        }
+        
+  h2 {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 57%;
+  font-family: 'Orbitron', sans-serif;
+  margin: center;
+}
+
+h3 {
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+    margin-right: 65%;
+  font-family: 'Orbitron', sans-serif;
+}
+        
+        
+   /* Gaya untuk footer */
+    footer {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    z-index: 10;
+    margin-top: 10px; 
+    position: relative; 
+    }
+        
+    </style>
+</head>
+<body>
+    <div class="profile-name">Font Text
+<hr>
+<h2>Pilih Text Disini</h2>
+<div class="container" >
+    <select id="fontSelector" style="width: 95%; height: 30px; font-size: 15px;  border: 1px solid #fff; border-radius: 5px; background-color: #333333;">
+<div class id="option value" >
+            <option value="fancy">𝙵𝚊𝚗𝚌𝚢</option>
+            <option value="gothic">𝔊𝔬𝔱𝔥𝔦𝔠</option>
+            <option value="bold">𝐁𝐨𝐥𝐝</option>
+            <option value="italic">𝘐𝘵𝘢𝘭𝘪𝘤</option>
+        </select>
+        <textarea id="normalText" placeholder="Tulis..."></textarea>
+<textarea id="fancyText" placeholder="Respon..." readonly style="width: 95%; height: 90px; margin-top: -5px; font-size: 18px; border: 1px solid gray; border-radius: 5px;"></textarea>
+<button id="copyButton" style="
+width: 30%; height: 30px; font-size: 10px;  border: 1px solid #fff; border-radius: 5px; background-color: #0f634a; font-weight: bold; margin-right: 65%;
+  font-family: 'Orbitron', sans-serif;">Copy</button>
+
+<script>
+    document.getElementById("copyButton").addEventListener("click", function() {
+        const fancyText = document.getElementById("fancyText");
+        fancyText.select();
+        document.execCommand("copy");
+        alert("Teks berhasil disalin!");
+    });
+</script>
+
+   <h3>Scroll Bar</h3>
+        <!-- Pembungkus tombol yang bisa digeser ke atas -->
+        <div class="button-wrapper">
+            <button class="customStyle" data-style="一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一">一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一</button>
+            <button class="customStyle" data-style="﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌">﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌</button>
+            <button class="customStyle" data-style="＿＿＿＿＿＿＿＿＿＿＿＿＿＿">＿＿＿＿＿＿＿＿＿＿＿＿＿＿</button>
+            <button class="customStyle" data-style="ꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻ">ꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻ</button>
+            <button class="customStyle" data-style="﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉">﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉</button>
+            <button class="customStyle" data-style="﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎">﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎</button>
+            <button class="customStyle" data-style="一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一">一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一</button>
+            <button class="customStyle" data-style="﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌">﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌</button>
+            <button class="customStyle" data-style="＿＿＿＿＿＿＿＿＿＿＿＿＿＿">＿＿＿＿＿＿＿＿＿＿＿＿＿＿</button>
+            
+            
+        </div>
+            <footer>Design Tommy | Versi 1.0</footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Objek gaya untuk setiap font
+        const fontStyles = {
+            fancy: {
+                a: '𝚊', b: '𝚋', c: '𝚌', d: '𝚍', e: '𝚎', f: '𝚏', g: '𝚐',
+                h: '𝚑', i: '𝚒', j: '𝚓', k: '𝚔', l: '𝚕', m: '𝚖', n: '𝚗',
+                o: '𝚘', p: '𝚙', q: '𝚚', r: '𝚛', s: '𝚜', t: '𝚝', u: '𝚞',
+                v: '𝚟', w: '𝚠', x: '𝚡', y: '𝚢', z: '𝚣',
+            },
+            gothic: {
+                a: '𝔞', b: '𝔟', c: '𝔠', d: '𝔡', e: '𝔢', f: '𝔣', g: '𝔤',
+                h: '𝔥', i: '𝔦', j: '𝔧', k: '𝔨', l: '𝔩', m: '𝔪', n: '𝔫',
+                o: '𝔬', p: '𝔭', q: '𝔮', r: '𝔯', s: '𝔰', t: '𝔱', u: '𝔲',
+                v: '𝔳', w: '𝔴', x: '𝔵', y: '𝔶', z: '𝔷',
+            },
+            bold: {
+                a: '𝐚', b: '𝐛', c: '𝐜', d: '𝐝', e: '𝐞', f: '𝐟', g: '𝐠',
+                h: '𝐡', i: '𝐢', j: '𝐣', k: '𝐤', l: '𝐥', m: '𝐦', n: '𝐧',
+                o: '𝐨', p: '𝐩', q: '𝐪', r: '𝐫', s: '𝐬', t: '𝐭', u: '𝐮',
+                v: '𝐯', w: '𝐰', x: '𝐱', y: '𝐲', z: '𝐳',
+            },
+            italic: {
+                a: '𝘢', b: '𝘣', c: '𝘤', d: '𝘥', e: '𝘦', f: '𝘧', g: '𝘨',
+                h: '𝘩', i: '𝘪', j: '𝘫', k: '𝘬', l: '𝘭', m: '𝘮', n: '𝘯',
+                o: '𝘰', p: '𝘱', q: '𝘲', r: '𝘳', s: '𝘴', t: '𝘵', u: '𝘶',
+                v: '𝘷', w: '𝘸', x: '𝘹', y: '𝘺', z: '𝘻',
+            }
+        };
+
+        // Fungsi untuk mengubah teks sesuai gaya
+        const transformText = (text, font) => {
+            if (!fontStyles[font]) return text;
+            return text.split('').map(char => {
+                const lower = char.toLowerCase();
+                return fontStyles[font][lower] || char;
+            }).join('');
+        };
+
+        $(document).ready(() => {
+            const $normalText = $('#normalText');
+            const $fancyText = $('#fancyText');
+            const $fontSelector = $('#fontSelector');
+
+            // Event listener untuk textarea
+            $normalText.on('input', () => {
+                const selectedFont = $fontSelector.val();
+                const normalText = $normalText.val();
+                const fancyText = transformText(normalText, selectedFont);
+                $fancyText.val(fancyText);
+            });
+
+            // Event listener untuk tombol gaya khusus
+            $('.customStyle').on('click', function () {
+                const customText = $(this).data('style');
+                const existingText = $fancyText.val();
+                $fancyText.val(`${existingText}\n${customText}`);
+            });
+        });
+    </script>
+</body>
+</html>
