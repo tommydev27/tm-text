@@ -6,6 +6,9 @@
     <title>Font Generator</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
     <style>
         /* Global styles for consistency */
         * {
@@ -13,9 +16,11 @@
         }
         body {
             font-family: 'Orbitron', sans-serif;
-            margin: 0;
+            margin: center;
+            width: center;
             padding: 0;
             background-color: white;
+            align-items: center;
         }
 
         /* Container to center content */
@@ -24,8 +29,56 @@
             flex-direction: column;
             align-items: center;
             padding: 0px;
-            
+
         }
+        
+        
+    /* Gaya media sosial */
+        .social-icons {
+            bottom: 0px;
+            margin-left: 50%;
+            margin-top: -12px;
+            display: flex;
+            gap: 10px;
+            z-index: 999;
+        }
+
+   .social-icons .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: inherit;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    background-color: inherit;
+    border-color: inherit;
+        }
+
+.social-icons .icon:hover {
+  animation: pulse 1.0s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0px 0px 1px #ff0000;
+      color: white;
+    border-color: #ff0000;
+     background: #007bff;
+  }
+  50% {
+    transform: scale(0.5);
+    box-shadow: 0px 0px 1px #ff0000;
+  }
+  100% {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 1px #007bff;
+  }
+  }
 
         /* Column styling */
         .col {
@@ -35,7 +88,7 @@
             padding: 10px;
             background-color: white;
             border-radius: 4px;
-            border: 1px solid #89a8c7;
+
         }
 
         /* Styling for form controls */
@@ -57,7 +110,7 @@
         h1 {
             margin-top: 0px;
             margin-bottom: 0px;
-            text-align: center;
+            text-align: left;
             color: #023961;
             font-size: 12px
         }
@@ -99,7 +152,7 @@
                 
             }
             .col {
-                padding: 5px;
+                padding: 0px;
             }
         }
         
@@ -130,8 +183,6 @@
     border-color: #888;
     }
 
-
-
     .button-wrapper::-webkit-scrollbar {
         height: 8px;
     }
@@ -148,11 +199,28 @@
     </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container"></div>
         
-       <div class="col">
-          <h1>Text Art Editor
-          <hr>
+       <div class="col"></div>
+          <h1>Text Art Editor</h1>
+          
+    <!-- Bagian ikon sosial media -->
+    <div class="social-icons" id="socialIconsContainer">
+        <div class="icon instagram" id="instagramIcon" onclick="navigateTo('https://tommydev27.github.io/tommy.website3/')">
+            <i class="far fa-image"></i>
+        </div>
+        <div class="icon youtube" id="youtubeIcon" onclick="navigateTo('https://tommydev27.github.io/tm-text/')">
+            <i class="fab fa-buysellads"></i>
+        </div>
+        <div class="icon facebook" id="facebookIcon" onclick="navigateTo('https://tommydev27.github.io/Keyboardtmdev/')">
+            <i class="fas fa-keyboard"></i>
+        </div>
+        <div class="icon twitter" id="twitterIcon" onclick="navigateTo('https://tommydev27.github.io/tommy.website-demo/')">
+            <i class="fab fa-mizuni"></i>
+        </div>
+    </div>
+    
+<div style="height: 1px; background-color: #ccc; width: 100%; margin-bottom: 5px; margin-top: 10px"></div>
             <textarea class="form-control" id="NormalTextarea" placeholder="Normal text here…" 
              style="width: 100%; height: 120px; font-size: 16px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 10px;"></textarea>
       
@@ -192,10 +260,10 @@
     <textarea class="form-control" id="FancyTextarea" placeholder="Fancy text here…" 
     style="width: 100%; height: 150px; font-size: 16px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
 
-     <button onclick="copyText('FancyTextarea')" style="font-family: 'Orbitron', sans-serif; font-size: 15px; font-weight: bold; margin-top:10px; background: #007bff; color: white;  border: 1px solid #007bff; border-radius: 3px;">Copy </button>
+     <button onclick="copyText('FancyTextarea')" style="font-family: 'Orbitron', sans-serif; font-size: 12px; font-weight: bold; margin-top:10px; background: #007bff; color: white;  border: 1px solid #007bff; border-radius: 3px;">Copy </button>
 
             
-<h2>Scroll </h2>
+<h2>Scroll bar</h2>
 <div class="button-wrapper">
     <button class="customStyle" data-style="一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一" onclick="insertText(this)">一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一</button>
     <button class="customStyle" data-style="﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌" onclick="insertText(this)">﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌</button>
@@ -204,7 +272,7 @@
 </div>
         <div>
      <h3>Tommy Website | Design V.27</h3>
-
+<div style="height: 1px; background-color: #ccc; width: 100%; margin-bottom:5px;"></div>
 
 
           </div>
@@ -601,7 +669,10 @@ $(".font-list").change(function() {
     }
 });
 
-
+        // **Navigasi Halaman**
+        function navigateTo(url) {
+            window.location.href = url; // Arahkan ke URL tujuan
+        }
 
     </script>
 </body>
